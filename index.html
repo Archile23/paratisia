@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te amo Sia</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0e6f6;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #d6336c;
+            font-size: 2.5em;
+        }
+        p {
+            color: #555;
+            font-size: 1.2em;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        .option-button {
+            background-color: #d6336c;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        .option-button:hover {
+            background-color: #b02958;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="content">
+            <h1>Querida</h1>
+            <p>Hoy quiero hablarte de lo especial que eres para mí. ¿De qué te gustaría que hable primero?</p>
+            <div class="options">
+                <button class="option-button" onclick="showPart('personality')">Tu Personalidad</button>
+                <button class="option-button" onclick="showPart('beaty')">Tú belleza</button>
+                <button class="option-button" onclick="showPart('memories')">Como nos fuimos tomando cariño</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPart(part) {
+            let content = document.getElementById('content');
+            if (part === 'beauty') {
+                content.innerHTML = `
+                    <h1>Tu Personalidad</h1>
+                    <p>Realmente no tengo mucho que decir aquí, la mayoría ya lo mencione pero amo, él como eres, ocurrente, divertida, un humor roto igual que yo, a veces amorosa y cariñosa, pero tampoco te gusta que no correspondan tus tratos, dices que por tu forma de ser la gente no se te acerca o tienden a alejarse, pero cuan equivocados estan al no apreciarte y conocerte tal y como eres, si lo hicieran se daría cuenta, y me daría celos, porqué intentarian arrebatarte de mi lado.</p>
+                    <div class="options">
+                        <button class="option-button" onclick="showPart('end')">Siguiente</button>
+                    </div>
+                `;
+            } else if (part === 'kindness') {
+                content.innerHTML = `
+                    <h1>Tú belleza</h1>
+                    <p>Tú belleza, no solo es física también esta dentro de tí, pero si hablamos de belleza física, me gusta de tí, tus ojos, tus labios, tus cejas, tu cabello, y sobre todo esa naricita tuya, que se que es una gran inseguridad, pero realmente se me hace demasiado bonita, y no te acomplejes de como eres, se que no siempre, pero en algún momento lo haces y no me gusta verte así.</p>
+                    <div class="options">
+                        <button class="option-button" onclick="showPart('end')">Siguiente</button>
+                    </div>
+                `;
+            } else if (part === 'memories') {
+                content.innerHTML = `
+                    <h1>Como nos fuimos tomando cariño</h1>
+                    <p>Se que al principio no tuvimos la mejor interacción, nos odiabamos, hasta tirarnos hate, y era tal vez porqué no te conocia, pero poco a poco, fui metiendome en tú corazón hasta llegar al ahora, tanto cambiamos en unos cuantos meses, me haces reir y extraño las pocas llamadas que hicimos, quisiera volver a hablar así contigo, espero ese día, para volver a hacerte reir como la primera vez.</p>
+                    <div class="options">
+                        <button class="option-button" onclick="showPart('end')">Siguiente</button>
+                    </div>
+                `;
+            } else if (part === 'end') {
+                content.innerHTML = `
+                    <h1>Te Amo</h1>
+                    <p>Gracias por ser quien eres y por hacerme la persona más feliz del mundo. Te amo más de lo que las palabras pueden expresar.</p>
+                    <div class="heart">💗</div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
