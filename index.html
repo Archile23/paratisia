@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Te amo Sia</title>
+    <title>Te amo mucho SIAAA</title>
     <style>
         body {
             display: flex;
@@ -54,20 +54,31 @@
 <body>
     <div class="container">
         <div id="content">
-            <h1>Querida</h1>
+            <h1>Querida SIAA</h1>
             <p>Hoy quiero hablarte de lo especial que eres para mí. ¿De qué te gustaría que hable primero?</p>
             <div class="options">
-                <button class="option-button" onclick="showPart('personality')">Tu Personalidad</button>
-                <button class="option-button" onclick="showPart('beaty')">Tú belleza</button>
-                <button class="option-button" onclick="showPart('memories')">Como nos fuimos tomando cariño</button>
+                <button class="option-button" id="personalityButton">Tu Personalidad</button>
+                <button class="option-button" id="beautyButton">Tu Bondad</button>
+                <button class="option-button" id="memoriesButton">Nuestros Recuerdos</button>
             </div>
         </div>
     </div>
 
     <script>
+        document.getElementById('personalityButton').addEventListener('click', function() {
+            showPart('personality');
+        });
+        document.getElementById('beautyButton').addEventListener('click', function() {
+            showPart('beauty');
+        });
+        document.getElementById('memoriesButton').addEventListener('click', function() {
+            showPart('memories');
+        });
+
         function showPart(part) {
+            console.log('showPart called with part:', part); // Debugging line
             let content = document.getElementById('content');
-            if (part === 'beauty') {
+            if (part === 'personality') {
                 content.innerHTML = `
                     <h1>Tu Personalidad</h1>
                     <p>Realmente no tengo mucho que decir aquí, la mayoría ya lo mencione pero amo, él como eres, ocurrente, divertida, un humor roto igual que yo, a veces amorosa y cariñosa, pero tampoco te gusta que no correspondan tus tratos, dices que por tu forma de ser la gente no se te acerca o tienden a alejarse, pero cuan equivocados estan al no apreciarte y conocerte tal y como eres, si lo hicieran se daría cuenta, y me daría celos, porqué intentarian arrebatarte de mi lado.</p>
@@ -75,7 +86,7 @@
                         <button class="option-button" onclick="showPart('end')">Siguiente</button>
                     </div>
                 `;
-            } else if (part === 'kindness') {
+            } else if (part === 'beauty') {
                 content.innerHTML = `
                     <h1>Tú belleza</h1>
                     <p>Tú belleza, no solo es física también esta dentro de tí, pero si hablamos de belleza física, me gusta de tí, tus ojos, tus labios, tus cejas, tu cabello, y sobre todo esa naricita tuya, que se que es una gran inseguridad, pero realmente se me hace demasiado bonita, y no te acomplejes de como eres, se que no siempre, pero en algún momento lo haces y no me gusta verte así.</p>
