@@ -58,7 +58,7 @@
             <p>Hoy quiero hablarte de lo especial que eres para mí. ¿De qué te gustaría que hable primero?</p>
             <div class="options">
                 <button class="option-button" id="personalityButton">Tu Personalidad</button>
-                <button class="option-button" id="beautyButton">Tu Bondad</button>
+                <button class="option-button" id="beautyButton">Tu Belleza</button>
                 <button class="option-button" id="memoriesButton">Nuestros Recuerdos</button>
             </div>
         </div>
@@ -76,28 +76,28 @@
         });
 
         function showPart(part) {
-            console.log('showPart called with part:', part); // Debugging line
+            console.log('showPart called with part:', part); // Línea de depuración
             let content = document.getElementById('content');
             if (part === 'personality') {
                 content.innerHTML = `
                     <h1>Tu Personalidad</h1>
-                    <p>Realmente no tengo mucho que decir aquí, la mayoría ya lo mencione pero amo, él como eres, ocurrente, divertida, un humor roto igual que yo, a veces amorosa y cariñosa, pero tampoco te gusta que no correspondan tus tratos, dices que por tu forma de ser la gente no se te acerca o tienden a alejarse, pero cuan equivocados estan al no apreciarte y conocerte tal y como eres, si lo hicieran se daría cuenta, y me daría celos, porqué intentarian arrebatarte de mi lado.</p>
+                    <p>Realmente no tengo mucho que decir aquí, la mayoría ya lo mencioné pero amo cómo eres, ocurrente, divertida, un humor roto igual que yo, a veces amorosa y cariñosa, pero tampoco te gusta que no correspondan tus tratos, dices que por tu forma de ser la gente no se te acerca o tienden a alejarse, pero cuan equivocados están al no apreciarte y conocerte tal y como eres, si lo hicieran se darían cuenta, y me daría celos, porque intentarían arrebatarte de mi lado.</p>
                     <div class="options">
                         <button class="option-button" onclick="showPart('end')">Siguiente</button>
                     </div>
                 `;
             } else if (part === 'beauty') {
                 content.innerHTML = `
-                    <h1>Tú belleza</h1>
-                    <p>Tú belleza, no solo es física también esta dentro de tí, pero si hablamos de belleza física, me gusta de tí, tus ojos, tus labios, tus cejas, tu cabello, y sobre todo esa naricita tuya, que se que es una gran inseguridad, pero realmente se me hace demasiado bonita, y no te acomplejes de como eres, se que no siempre, pero en algún momento lo haces y no me gusta verte así.</p>
+                    <h1>Tu Belleza</h1>
+                    <p>Tu belleza, no solo es física también está dentro de ti, pero si hablamos de belleza física, me gusta de ti, tus ojos, tus labios, tus cejas, tu cabello, y sobre todo esa naricita tuya, que sé que es una gran inseguridad, pero realmente se me hace demasiado bonita, y no te acomplejes de como eres, sé que no siempre, pero en algún momento lo haces y no me gusta verte así.</p>
                     <div class="options">
                         <button class="option-button" onclick="showPart('end')">Siguiente</button>
                     </div>
                 `;
             } else if (part === 'memories') {
                 content.innerHTML = `
-                    <h1>Como nos fuimos tomando cariño</h1>
-                    <p>Se que al principio no tuvimos la mejor interacción, nos odiabamos, hasta tirarnos hate, y era tal vez porqué no te conocia, pero poco a poco, fui metiendome en tú corazón hasta llegar al ahora, tanto cambiamos en unos cuantos meses, me haces reir y extraño las pocas llamadas que hicimos, quisiera volver a hablar así contigo, espero ese día, para volver a hacerte reir como la primera vez.</p>
+                    <h1>Nuestros Recuerdos</h1>
+                    <p>Sé que al principio no tuvimos la mejor interacción, nos odiábamos, hasta tirarnos hate, y era tal vez porque no te conocía, pero poco a poco, fui metiéndome en tu corazón hasta llegar al ahora, tanto cambiamos en unos cuantos meses, me haces reír y extraño las pocas llamadas que hicimos, quisiera volver a hablar así contigo, espero ese día, para volver a hacerte reír como la primera vez.</p>
                     <div class="options">
                         <button class="option-button" onclick="showPart('end')">Siguiente</button>
                     </div>
